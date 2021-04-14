@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-aprendendo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Augusto da Silva",
+  "license": "ISC",
+  "dependencies": {
+    "cfonts": "^2.9.1"
+  }
+}
