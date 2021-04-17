@@ -2,10 +2,12 @@ const express = require("express")
 const path = require("path")
 const server = express()
 
+// habilitar arquivos statics
+server.use(express.static("public"))
+
 // request, response
 server.get('/', (request, response) => {
-    console.log(path.resolve(__dirname, "views", "index.html"))
-    // return response.sendFile("C:\Users\lucassilva\Downloads\Visual Studio\maratona-discover-02-1.0.0")
+    return response.sendFile(path.resolve(__dirname, "views", "index.html"))
 })
 
 server.listen(3000, () => console.log('rodando'))
