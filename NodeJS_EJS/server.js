@@ -3,8 +3,8 @@ const server = express()
 
 server.set("view engine", "ejs")
 
-server.get("pages/home", (req, res) => res.render("index"))
+server.get("/home", (req, res) => res.render("pages/index"))
 
-server.get("pages/sobre", (req, res) => res.render("about"))
+server.get("/sobre", (req, res) => res.render("pages/about"))
 
 server.listen(3000, () => console.log("rodando"))
