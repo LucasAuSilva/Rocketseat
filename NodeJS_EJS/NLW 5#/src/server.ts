@@ -15,8 +15,8 @@ server.get("/", (req, res) => {
     })
 })
 
-server.post("/users", (req, res) => {
-    return response.json({ message: "User save with success! "})
+server.post("/", (req, res) => {
+    return res.json({ message: "User save with success! "})
 })
 
 
