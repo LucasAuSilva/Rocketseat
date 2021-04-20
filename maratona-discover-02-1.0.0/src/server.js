@@ -1,22 +1,25 @@
-// express é uma biblioteca para criar um servidor
+// express is a library for create server
 const express = require("express")
 
-// é um biblioteca npm para pegar caminhos dos arquivos
+// npm library for taking the "path" of the files
 const path = require("path")
 
-// server é uma constante para express
+// server is a express constant
 const server = express()
 
-// chamando o arquivo routes para enviar para server
+// call the files from routes to send for the server
 const routes = require("./routes")
 
-// usando template engine
+// able/using template engine
 server.set('view engine', 'ejs')
 
-// habilitar arquivos statics
+// able/using the req.body
+server.use(express.urlencoded( { extended: true } ))
+
+// able/using the files static
 server.use(express.static("public"))
 
 // routes
 server.use(routes)
 
-server.listen(3000, () => console.log('rodando'))
+server.listen(3000, () => console.log('Running server on port 3000'))
