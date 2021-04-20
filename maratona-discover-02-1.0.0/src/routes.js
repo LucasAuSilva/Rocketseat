@@ -98,7 +98,7 @@ const Job = {
         },
 
         save(req, res) {
-            const lastId = Job.data[Job.data.length - 1]?.id || 1
+            const lastId = Job.data[Job.data.length - 1]?.id || 0
 
             Job.data.push({
                 id: lastId + 1, // id for primary identifier
@@ -193,7 +193,7 @@ routes.post('/job', Job.controllers.save)
 // job edit page
 routes.get('/job/edit_:id', Job.controllers.show)
 routes.post('/job/edit_:id', Job.controllers.update)
-routes.post('/job/delete/edit_:id', Job.controllers.delete)
+routes.post('/job/delete/:id', Job.controllers.delete)
 
 // profile page
 routes.get('/profile', Profile.controllers.index )

@@ -110,7 +110,7 @@
                   <img src="/images/edit-24.svg" alt="Editar Job" />
                 </a>
                 <button class="delete button white" title="Excluir Job">
-                  <img src="/images/trash-24.svg" alt="Excluir Job" />
+                  <img src="/images/trash-24.svg" alt="Excluir Job"/>
                 </button>
               </div>
             </div>
@@ -127,7 +127,7 @@
         <h3>Excluir Job</h3>
         <p>Quer mesmo excluir esse job? <br/>
         Ele será apagado para sempre.  
-        <p>
+        </p>
         <footer>
           <a 
             class="button gray" 
@@ -140,7 +140,7 @@
       </div>
       <form 
         method="post" 
-        action="/job/delete" 
+        action="/job/delete/edit_<%= jobs.id %>" 
         id="delete-job"></form>
     </div>
     <!-- end modal-wrapper -->
