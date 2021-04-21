@@ -4,8 +4,6 @@ import { routes } from "./routes"
 
 const server = express();
 
-server.use(express.json())
-
 /*
 * GET = Search
 * POST = Creating
@@ -14,6 +12,7 @@ server.use(express.json())
 * PATH = update specific information
 */
 
+server.use(express.json())
 server.use(routes);
 
 server.listen(3000, () => console.log("Server running on port 3000"))
