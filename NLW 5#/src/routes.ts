@@ -18,6 +18,9 @@ const routes = Router();
  * Body params => { } objects, information, data
  */
 
+routes.get("/settings/:username", settingsController.findByUsername)
+routes.put("/settings/:username", settingsController.update)
+
 routes.post("/settings", settingsController.create)
 routes.post("/users", usersController.create)
 routes.post("/messages", messagesController.create)
